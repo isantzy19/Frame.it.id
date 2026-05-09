@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frame it! — Frame your best moment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ☀️ Sun decoration -->
+<div class="sun-icon" id="sunIcon">☀️</div>
+
+<!-- ================================================
+     SCREEN 1: LANDING (Frame 2) — scrollable
+     ================================================ -->
+<div class="screen active" id="screen-landing">
+  <!-- HERO SECTION -->
+  <section class="landing-hero">
+    <h1 class="landing-title">Frame it!</h1>
+    <p class="landing-subtitle">Frame your best moment</p>
+    <div class="landing-previews">
+      <div class="strip-cluster left-cluster">
+        <div class="preview-strip ps1">
+          <div class="pc tall"></div>
+          <div class="pc"></div>
+          <div class="pc"></div>
+        </div>
+        <div class="preview-strip ps2">
+          <div class="pc"></div>
+          <div class="pc"></div>
+          <div class="pc"></div>
+        </div>
+      </div>
+      <div class="hero-center">
+        <button class="btn-start" onclick="goToLayout()">START</button>
+        <p class="scroll-hint">Scroll down for more information<br>∨</p>
+      </div>
+      <div class="strip-cluster right-cluster">
+        <div class="preview-strip ps3">
+          <div class="pc"></div>
+          <div class="pc"></div>
+          <div class="pc"></div>
+        </div>
+        <div class="preview-strip ps4">
+          <div class="pc"></div>
+          <div class="pc"></div>
+          <div class="pc"></div>
+          <div class="pc"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-section">
+    <h2 class="how-title">How It Works</h2>
+    <p class="how-sub">Take your best photobooth with just 4 steps</p>
+    <div class="how-steps">
+      <div class="how-card">
+        <div class="how-icon">⊞</div>
+        <strong>Choose Layout</strong>
+        <p>Select between 1, 2, or 3 pictures layout for your photobooth session.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-icon">📷</div>
+        <strong>Camera or Gallery</strong>
+        <p>Decide whether to take new photos with your webcam or use existing ones from your gallery.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-icon">⚡</div>
+        <strong>Cheese!</strong>
+        <p>Capture the moment or select your favorite photos from your gallery.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-icon">✏️</div>
+        <strong>Customize</strong>
+        <p>Add borders, overlays, and captions to make your photos unique and memorable.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIVACY POLICY -->
+  <section class="privacy-section">
+    <h2 class="privacy-title">Privacy Policy</h2>
+    <div class="privacy-block">
+      <div class="privacy-icon">🔵</div>
+      <div>
+        <h3>Photo Privacy</h3>
+        <p>We do not store your photos anywhere. All photo processing in Snappy happens exclusively on your device. Your photos never leave your device unless you explicitly choose to download or share them.</p>
+        <p style="margin-top:12px">When you take or upload photos in our app:</p>
+        <ul>
+          <li>All photos are processed entirely within your browser</li>
+          <li>No images are transmitted to any external servers</li>
+          <li>Your photos remain in your temporary browser memory until you close the app</li>
+        </ul>
+      </div>
+    </div>
+    <div class="privacy-block">
+      <div class="privacy-icon">📋</div>
+      <div>
+        <h3>Data Collection</h3>
+        <ul>
+          <li>Never include any image data or content from your photo sessions</li>
+          <li>Only collect anonymous usage statistics like page views and feature usage</li>
+          <li>Help us improve the application's functionality and user experience</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONNECT WITH US -->
+  <section class="connect-section">
+    <h2 class="connect-title">Connect With Us</h2>
+    <p class="connect-sub">Follow every update from us and share your FrameIt moments</p>
+    <div class="connect-cards">
+      <div class="connect-card">
+        <div class="connect-icon">📸</div>
+        <p>Instagram</p>
+        <strong>@Frame.it.id</strong>
+       
+        <button class="btn-follow">Follow</button>
+      </div>
+      <div class="connect-card">
+        <div class="connect-icon">🎵</div>
+        
+        rel="noopener noreferrer">
+        <button class="btn-follow">
+          Follow
+          </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEEDBACK -->
+  <section class="feedback-section">
+    <strong>Have ideas or suggestions?</strong>
+    <p>We love hearing from our community! If you have tips, feature suggestions, or improvements, please don't hesitate to reach out. Your feedback helps us create a better experience for everyone.</p>
+    <p>Contact Us at FrameIt@gmail.com</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="landing-footer">2026 FrameIt. All right reserved</footer>
+</div>
+
+
+<!-- ================================================
+     SCREEN 2: PICK A LAYOUT (Frame 3/4/5)
+     ================================================ -->
+<div class="screen" id="screen-layout">
+  <div class="page-card">
+    <div class="stepper">
+      <div class="step-item active"><div class="step-circle active">⊞</div><div class="step-label">Layout</div></div>
+      <div class="step-line"></div>
+      <div class="step-item"><div class="step-circle">📷</div><div class="step-label">Mode</div></div>
+      <div class="step-line"></div>
+      <div class="step-item"><div class="step-circle">⚡</div><div class="step-label">Snap</div></div>
+      <div class="step-line"></div>
+      <div class="step-item"><div class="step-circle">✏️</div><div class="step-label">Customize</div></div>
+    </div>
+    <h2 class="section-title">Pick a Layout</h2>
+    <div class="layout-cards">
+      <div class="layout-card" id="lc2" onclick="selectLayout(2)">
+        <div class="lc-slot big"></div>
+        <div class="lc-slot big"></div>
+      </div>
+      <div class="layout-card" id="lc3" onclick="selectLayout(3)">
+        <div class="lc-slot med"></div>
+        <div class="lc-slot med"></div>
+        <div class="lc-slot med"></div>
+      </div>
+    </div>
+    <div class="selected-label" id="layoutLabel"></div>
+    <button class="nav-back" onclick="showScreen('screen-landing')">＜</button>
+    <button class="nav-next" id="layoutNext" onclick="goToMode()" disabled>＞</button>
+  </div>
+</div>
+
+
+<!-- ================================================
+     SCREEN 3: SNAP OR GALLERY (Frame 6/7/8)
+     ================================================ -->
+<div class="screen" id="screen-mode">
+  <div class="page-card">
+    <div class="stepper">
+      <div class="step-item"><div class="step-circle">⊞</div><div class="step-label">Layout</div></div>
+      <div class="step-line"></div>
+      <div class="step-item active"><div class="step-circle active">📷</div><div class="step-label">Mode</div></div>
+      <div class="step-line"></div>
+      <div class="step-item"><div class="step-circle">⚡</div><div class="step-label">Snap</div></div>
+      <div class="step-line"></div>
+      <div class="step-item"><div class="step-circle">✏️</div><div class="step-label">Customize</div></div>
+    </div>
+    <h2 class="section-title">Snap Or Gallery</h2>
+    <div class="mode-cards">
+      <div class="mode-card" id="modeCamera" onclick="selectMode('camera')">
+        <div class="mode-circle">
+          <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 14l3-5h10l3 5h6a4 4 0 014 4v22a4 4 0 01-4 4H14a4 4 0 01-4-4V18a4 4 0 014-4h6z" stroke="#5b8fa8" stroke-width="3" stroke-linejoin="round" fill="none"/>
+            <circle cx="28" cy="29" r="8" stroke="#5b8fa8" stroke-width="3" fill="none"/>
+            <circle cx="28" cy="29" r="3" fill="#5b8fa8"/>
+          </svg>
+        </div>
+        <div class="mode-label">Camera</div>
+      </div>
+      <div class="mode-card" id="modeGallery" onclick="selectMode('gallery')">
+        <div class="mode-circle">
+          <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="12" width="36" height="32" rx="4" stroke="#5b8fa8" stroke-width="3" fill="none"/>
+            <path d="M10 36l11-11 8 8 6-6 11 9" stroke="#5b8fa8" stroke-width="3" stroke-linejoin="round"/>
+            <circle cx="20" cy="22" r="3" fill="#5b8fa8"/>
+          </svg>
+        </div>
+        <div class="mode-label">Gallery</div>
+      </div>
+    </div>
+    <button class="nav-back" onclick="showScreen('screen-layout')">＜</button>
+    <button class="nav-next" id="modeNext" onclick="goToSnap()" disabled>＞</button>
+  </div>
+</div>
+
+
+<!-- ================================================
+     SCREEN 4a: CAMERA SNAP (Frame 10/11/12/13 for 3-photo | 15/16/17/18 for 2-photo)
+     ================================================ -->
+<div class="screen" id="screen-camera">
+  <div class="page-card">
+    <div class="stepper">
+      <div class="step-item"><div class="step-circle">⊞</div><div class="step-label">Layout</div></div>
+      <div class="step-line"></div>
+      <div class="step-item"><div class="step-circle">📷</div><div class="step-label">Mode</div></div>
+      <div class="step-line"></div>
+      <div class="step-item active"><div class="step-circle active">⚡</div><div class="step-label">Snap</div></div>
+      <div class="step-line"></div>
+      <div class="step-item"><div class="step-circle">✏️</div><div class="step-label">Customize</div></div>
+    </div>
+
+    <!-- Big Camera View -->
+    <div class="cam-big" id="camBig">
+      <video id="webcam" autoplay muted playsinline></video>
+      <div class="countdown-overlay" id="countdownOverlay"></div>
+      <div class="flash-overlay" id="flashOverlay"></div>
+      <div class="cam-error-msg" id="camError">
+        <div class="err-icon">📷</div>
+        <strong>Kamera tidak bisa diakses</strong>
+        <span>Izinkan akses kamera di browser kamu.</span>
+      </div>
+    </div>
+
+    <!-- Thumbnail slots -->
+    <div class="thumbnails" id="camThumbs"></div>
+
+    <!-- START button -->
+    <button class="btn-action" id="camStartBtn" onclick="startCapture()">START</button>
+
+    <button class="nav-back" onclick="stopCamera(); showScreen('screen-mode')">＜</button>
+    <button class="nav-next" id="camNext" onclick="goToCustomize()" disabled>＞</button>
+  </div>
+</div>
+
+
+<!-- ================================================
+     SCREEN 4b: GALLERY INPUT (Frame 14 for 3-photo | Frame 19 for 2-photo)
+     ================================================ -->
+<div class="screen" id="screen-gallery">
+  <div class="page-card">
+    <div class="stepper">
+      <div class="step-item"><div class="step-circle">⊞</div><div class="step-label">Layout</div></div>
+      <div class="step-line"></div>
+      <div class="step-item"><div class="step-circle">📷</div><div class="step-label">Mode</div></div>
+      <div class="step-line"></div>
+      <div class="step-item active"><div class="step-circle active">⚡</div><div class="step-label">Snap</div></div>
+      <div class="step-line"></div>
+      <div class="step-item"><div class="step-circle">✏️</div><div class="step-label">Customize</div></div>
+    </div>
+
+    <!-- Big preview box -->
+    <div class="cam-big gallery-big" id="galleryBig" onclick="triggerInput()">
+      <div class="gallery-placeholder" id="galleryPlaceholder">
+        <span class="ph-icon">🖼️</span>
+        <span>Tap to select photos</span>
+        <span class="ph-hint">Select <span id="galleryCount">3</span> photos</span>
+      </div>
+      <img id="galleryPreview" src="" alt="" style="display:none;">
+    </div>
+    <input type="file" id="galleryFileInput" accept="image/*" multiple onchange="onGalleryChange(event)">
+
+    <!-- Thumbnails -->
+    <div class="thumbnails" id="galleryThumbs"></div>
+
+    <!-- INPUT button -->
+    <button class="btn-action" onclick="triggerInput()">INPUT</button>
+
+    <button class="nav-back" onclick="showScreen('screen-mode')">＜</button>
+    <button class="nav-next" id="galleryNext" onclick="goToCustomize()" disabled>＞</button>
+  </div>
+</div>
+
+
+<!-- ================================================
+     SCREEN 5: CUSTOMIZE / RETAKE (Frame 23 for 2 | Frame 24 for 3)
+     ================================================ -->
+<div class="screen" id="screen-customize">
+  <div class="page-card">
+    <div class="stepper">
+      <div class="step-item"><div class="step-circle">⊞</div><div class="step-label">Layout</div></div>
+      <div class="step-line"></div>
+      <div class="step-item"><div class="step-circle">📷</div><div class="step-label">Mode</div></div>
+      <div class="step-line"></div>
+      <div class="step-item"><div class="step-circle">⚡</div><div class="step-label">Snap</div></div>
+      <div class="step-line"></div>
+      <div class="step-item active"><div class="step-circle active">✏️</div><div class="step-label">Customize</div></div>
+    </div>
+
+    <!-- Photos preview row -->
+    <div class="customize-photos" id="customizePhotos"></div>
+
+    <!-- RETAKE button -->
+    <button class="btn-action" onclick="doRetake()">RETAKE</button>
+
+    <button class="nav-back" onclick="goBackFromCustomize()">＜</button>
+    <button class="nav-next" onclick="goToStyle()">＞</button>
+  </div>
+</div>
+
+
+<!-- ================================================
+     SCREEN 6: PICK A STYLE / DOWNLOAD
+     (Frame 25-29 for 3-photo | Frame 30-33 for 2-photo)
+     Scrollable, with Frame dropdown
+     ================================================ -->
+<div class="screen scrollable" id="screen-style">
+  <div class="page-card style-card">
+    <div class="stepper">
+      <div class="step-item"><div class="step-circle">⊞</div><div class="step-label">Layout</div></div>
+      <div class="step-line"></div>
+      <div class="step-item"><div class="step-circle">📷</div><div class="step-label">Mode</div></div>
+      <div class="step-line"></div>
+      <div class="step-item"><div class="step-circle">⚡</div><div class="step-label">Snap</div></div>
+      <div class="step-line"></div>
+      <div class="step-item active"><div class="step-circle active">✏️</div><div class="step-label">Customize</div></div>
+    </div>
+
+    <h2 class="section-title">Pick a style!</h2>
+
+    <!-- Strip Preview -->
+    <div class="style-strip-wrap" id="styleStripWrap">
+      <canvas id="styleCanvas"></canvas>
+    </div>
+
+    <!-- Frame dropdown -->
+    <div class="frame-dropdown-wrap">
+      <button class="frame-dropdown-btn" id="frameDropBtn" onclick="toggleFrameDropdown()">
+        Frame &nbsp;∨
+      </button>
+      <div class="frame-dropdown-list" id="frameDropList">
+        <!-- populated by JS -->
+      </div>
+    </div>
+
+    <!-- Download button -->
+    <button class="btn-download" onclick="downloadPhoto()">Download</button>
+
+    <!-- Hidden canvas for final render -->
+    <canvas id="finalCanvas" style="display:none;"></canvas>
+
+    <button class="nav-back" onclick="showScreen('screen-customize')" style="position:sticky;bottom:24px;left:24px;">＜</button>
+    <button class="nav-next" onclick="showScreen('screen-landing'); resetAll();" style="position:sticky;bottom:24px;right:24px;">＞</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
