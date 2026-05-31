@@ -111,22 +111,28 @@
   </section>
 
   <!-- CONNECT WITH US -->
-  <section class="connect-section">
-    <h2 class="connect-title">Connect With Us</h2>
-    <p class="connect-sub">Follow every update from us and share your FrameIt moments</p>
-    <div class="connect-cards">
-      <div class="connect-card">
-        <div class="connect-icon">📸</div>
-        <p>Instagram</p>
-        <strong>@Frame.it.id</strong>
-        <button class="btn-follow">Follow</button>
-      </div>
-      <div class="connect-card">
-        <div class="connect-icon">🎵</div>
-        <p>Tiktok</p>
-        <strong>@Frameit.id</strong>
-        <button class="btn-follow">Follow</button>
-      </div>
+ <section class="connect-section">
+        <h2 class="connect-title">Connect With Us</h2>
+        <p class="connect-sub">Follow every update from us and share your FrameIt moments</p>
+        <div class="connect-cards">
+            <!-- Instagram Card -->
+            <div class="connect-card">
+                <div class="connect-icon">📸</div>
+                <p>Instagram</p>
+                <strong>@Frame.it.id</strong>
+                <!-- Tombol follow akan membuka link instagram resmi: https://instagram.com/frame.it.id -->
+                <button class="btn-follow" data-platform="instagram" data-url="https://instagram.com/frame.it.id">Follow</button>
+            </div>
+            <!-- TikTok Card dengan link yang disediakan (termasuk parameter tracking) -->
+            <div class="connect-card">
+                <div class="connect-icon">🎵</div>
+                <p>TikTok</p>
+                <strong>@Frameit.id</strong>
+                <!-- Tombol follow langsung ke link TikTok lengkap: https://www.tiktok.com/@frameit.id?_r=1&_t=ZS-96Dj9tZxsOX -->
+                <button class="btn-follow" data-platform="tiktok" data-url="https://www.tiktok.com/@frameit.id?_r=1&_t=ZS-96Dj9tZxsOX">Follow</button>
+            </div>
+        </div>
+        <div class="footnote">
     </div>
   </section>
 
